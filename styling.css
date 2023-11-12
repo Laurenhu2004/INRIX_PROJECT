@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+}
+
+.backgroundPic{
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc;
+    position:absolute;
+    z-index: -1;
+    background-image: url(https://assets.scu.edu/map/images/tiles/std/img_21140_50857.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(0);
+    background-size: cover;
+}
+
+.indexTitle{
+    width: 40%;
+    height: 10%;
+    z-index: 1;
+    background-color: rgba(255,255,255,.2) ;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    top: 50%;
+    left: 50%;
+    font-family: 'Courier New', monospace;
+    font-size: 100%;
+    color: rgb(28, 28, 201);
+}
+
+.emptySpace {
+    height: 20%;
+}
+
+.inputInfo input{
+    background-color: rgba(0,0,0,0.5) ;
+    border: none;
+    border-bottom: 5px, black;
+    margin-left: 4%;
+    color: turquoise;
+}
+
+.priorities {
+    text-align: right;
+}
+
+.priorities select{
+    margin-top: 15px;
+    background-color: rgba(0,0,0,0.5);
+    color: turquoise;
+    height: 5%;
+    width: 25%;
+    margin-right: 33%;
+}
+
+.priorities label{
+    color: white;   
+}
+
+.searchBtn {
+    text-align: center;
+}
+
+.searchBtn button{
+    height: 10%;
+    width: 30%;
+    margin-top: 5%;
+    background-color: turquoise;
+    color: rgb(50, 39, 39);
+    border-radius: 15px;
+}
+
+.searchBtn button:hover{
+    background-color: transparent;
+    color: turquoise;
+    transition-duration: 0.2s;
+    border: none;
+    border-bottom: 0.5rem solid;
+}

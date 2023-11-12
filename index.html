@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INRIX PARKING</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="backgroundPic">
+            <img>
+        </div>
+        <div class="emptySpace"></div>
+        <div class="indexTitle">
+            <h1>INRIX PARKING ASSIST</h1> 
+        </div>
+        <div class="inputInfo">
+            <input type="text" placeholder="Address...">
+            <input type="text" placeholder="City...">
+            <input type="text" placeholder="State...">
+            <input type="text" placeholder="ZIP...">
+            <input type="text" placeholder="Radius from Location...">
+        </div>
+        <div class="priorities">
+            <label for="safetySelect">SAFETY Importance:</label>
+            <select id="safetySelect">
+                <option>Please Select An Option...</option>
+                <option>Very Important</option>
+                <option>Important</option>
+                <option>Not Important</option>
+            </select>
+        </div>
+        <div class="priorities">
+            <label for="chanceSelect">CHANCE Importance:</label>
+            <select id="chanceSelect">
+                <option>Please Select An Option...</option>
+                <option>Very Important</option>
+                <option>Important</option>
+                <option>Not Important</option>
+            </select>
+        </div>
+        <div class="priorities">
+            <label for="costSelect">COST Importance:</label>
+            <select id="costSelect">
+                <option>Please Select An Option...</option>
+                <option>Very Important</option>
+                <option>Important</option>
+                <option>Not Important</option>
+            </select>
+        </div>
+        <div class="searchBtn">
+            <a href="/spots.html">
+             <button>
+                SHOW ME PARKING SPOTS!
+             </button>
+            </a>
+        </div>
+    </div>
+    <script src="app.js"></script> 
+</body>
+</html>
