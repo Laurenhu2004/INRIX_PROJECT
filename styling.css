@@ -162,7 +162,10 @@ body{
 }
 
 .spotRankings button{
-    background-color: transparent;
+    border-radius: 12px;
+    padding: 10px 8px;
+    margin-bottom: 5%;
+    background-color: lightgrey;
     color:  rgb(20, 26, 52);
     font-size: 205%;
     border: none;
