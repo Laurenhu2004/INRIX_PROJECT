@@ -169,12 +169,35 @@ body{
     border-bottom: 2px, rgb(20, 26, 52);
 }
 
-.spotRankings button:hover{
-    background-color: rgb(20, 26, 52);
+.addy1 button:hover{
+    background-color: #5c0606;
     color:  lightgrey;
     font-size: 210%;
     transition-duration: 0.2s;
-    
+}
+.addy2 button:hover{
+    background-color: #215227;
+    color:  lightgrey;
+    font-size: 210%;
+    transition-duration: 0.2s;
+}
+.addy3 button:hover{
+    background-color: #06195c;
+    color:  lightgrey;
+    font-size: 210%;
+    transition-duration: 0.2s;
+}
+.addy4 button:hover{
+    background-color: #a38908;
+    color:  lightgrey;
+    font-size: 210%;
+    transition-duration: 0.2s;
+}
+.addy5 button:hover{
+    background-color: #57078c;
+    color:  lightgrey;
+    font-size: 210%;
+    transition-duration: 0.2s;
 }
 
 .tryNew {

@@ -32,29 +32,69 @@
         center: [-122.4, 37.75], // Center of the map
         zoom: 10 // Zoom level
         });
-        const marker = new mapboxgl.Marker({
-            color: "#fcb103",
-            draggable: false
-        });
-        marker.setLngLat([-122.431899, 37.751430]).addTo(map);
         </script>
     </div>
         <div class="spotRankings">
-            <button>
-                1. BEST SPOT
-            </button><br>
-            <button>
-                2. 2ND BEST SPOT
-            </button><br>
-            <button>
-                3. 3RD BEST SPOT
-            </button><br>
-            <button>
-                4. 4TH BEST SPOT
-            </button><br>
-            <button>
-                5. 5TH BEST SPOT
-            </button><br>
+            <div class ="addy1">
+                <button>
+                    BEST SPOT
+                </button><br>
+                <script>
+                    var marker1 = new mapboxgl.Marker({
+                        color: "#5c0606",
+                        draggable: false
+                    });
+                    marker1.setLngLat([long, lat]).addTo(map);          //need coordinates here
+                </script>
+            </div>
+            <div class ="addy2">
+                <button>
+                    2ND BEST SPOT
+                </button><br>
+                <script>
+                    const marker2 = new mapboxgl.Marker({
+                        color: "#215227",
+                        draggable: false
+                    });
+                    marker2.setLngLat([long, lat]).addTo(map);          //need coordinates here
+                </script>
+            </div>
+            <div class ="addy3">
+                <button>
+                    3RD BEST SPOT
+                </button><br>
+                <script>
+                    const marker3 = new mapboxgl.Marker({
+                        color: "#06195c",
+                        draggable: false
+                    });
+                    marker3.setLngLat([long, lat]).addTo(map);          //need coordinates here
+                </script>
+            </div>
+            <div class ="addy4">
+                <button>
+                    4TH BEST SPOT
+                </button><br>
+                <script>
+                    const marker4 = new mapboxgl.Marker({
+                        color: "#a38908",
+                        draggable: false
+                    });
+                    marker4.setLngLat([long, lat]).addTo(map);          //need coordinates here
+                </script>
+            </div>
+            <div class ="addy5">
+                <button>
+                    5TH BEST SPOT
+                </button><br>
+                <script>
+                    const marker5 = new mapboxgl.Marker({
+                        color: "#57078c",
+                        draggable: false
+                    });
+                    marker5.setLngLat([long, lat]).addTo(map);          //need coordinates here
+                </script>
+            </div>
         </div>
     </div>
     <a href="/index.html">
