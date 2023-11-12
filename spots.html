@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INRIX PARKING</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
-    <link rel="stylesheet" href="styling.css" type="text/css">
+    <link rel="stylesheet" href="/static/styling.css" type="text/css">
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
@@ -12,114 +12,110 @@
 </head>
 
 <body>
-    <div class="backgroundPic">
-        <img>
-    </div>
-    <div class="chosenEmptySpace"></div>
+    <div class="backgroundPic"></div>
     <div class="indexTitle">
         <h1>CurbStop</h1> 
     </div>
-
-    <div class="rankings">
-
-    <div class="spotsMap">
-        <div id='map' style='width: 70vh; height: 50vh;'></div>
-        <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYW5uaWthbjE2IiwiYSI6ImNsb3YwbzBhNjBuczYyaXBmbTNnNzRsa20ifQ.Nf8u0AbtL89Ce5TwhV01hQ';
-        const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11', // Map style
-        center: [-122.4, 37.75], // Center of the map
-        zoom: 10 // Zoom level
-        });
-        </script>
-    </div>
-        <div class="spotRankings">
-            <div class ="addy1">
-              
+    <div class = "big">
+        <div class = "everything">
+            <div class="spotsMap">
+                <div id='map' style='width: 70vh; height: 50vh;'></div>
+                <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoiYW5uaWthbjE2IiwiYSI6ImNsb3YwbzBhNjBuczYyaXBmbTNnNzRsa20ifQ.Nf8u0AbtL89Ce5TwhV01hQ';
+                const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11', // Map style
+                center: [-122.4, 37.75], // Center of the map
+                zoom: 10 // Zoom level
+                });
+                </script>
+            </div>
+            <div class = "right">
+                <div class="spotRankings">
+                    <div class ="addy1">
+                        <button onclick="toggleVisibility('1')">{{ names0 }}</button>
+                        <div id="1" class="hidden">
+                            <p>{{ details0 }}</p>
+                        </div>
+                        <script>
+                            function toggleVisibility(hiddenContent) {
+                                var content = document.getElementById(hiddenContent);
+                                if (content.style.display == "none") {
+                                    content.style.display = "block";
+                                } else {
+                                    content.style.display = "none";
+                                }
+                            }
+                        </script>
+                        <script>
+                            var marker1 = new mapboxgl.Marker({
+                                color: "#5c0606",
+                                draggable: false
+                            });
+                            marker1.setLngLat([long, lat]).addTo(map);          //need coordinates here
+                        </script>
+                    </div>
+                    <div class ="addy2">
+                        <button onclick="toggleVisibility('2')">{{ names1 }}</button>
+                        <div id="2" class="hidden">
+                            <p>{{ details1 }}</p>
+                        <script>
+                            const marker2 = new mapboxgl.Marker({
+                                color: "#215227",
+                                draggable: false
+                            });
+                            marker2.setLngLat([35, -111]).addTo(map);          //need coordinates here
+                        </script>
+                        </div>
+                    </div>
+                    <div class ="addy3">
+                        <button onclick="toggleVisibility('3')">{{ names2 }}</button>
+                        <div id="3" class="hidden">
+                            <p>{{ details2 }}</p>
     
-                <button onclick="toggleVisibility('1')">BEST SPOT</button>
-                <div id="1" class="hidden">
-                    <p>Cost and Details</p>
+                        <script>
+                            const marker3 = new mapboxgl.Marker({
+                                color: "#06195c",
+                                draggable: false
+                            });
+                            marker3.setLngLat([36, -122]).addTo(map);          //need coordinates here
+                        </script>
+                        </div>
+                    </div>
+                    <div class ="addy4">
+                        <button onclick="toggleVisibility('4')">{{ names3 }}</button>
+                        <div id="4" class="hidden">
+                            <p>{{ details3 }}</p>
+                        <script>
+                            const marker4 = new mapboxgl.Marker({
+                                color: "#a38908",
+                                draggable: false
+                            });
+                            marker4.setLngLat([37, -110]).addTo(map);          //need coordinates here
+                        </script>
+                        </div>
+                    </div>
+                    <div class ="addy5">
+                        <button onclick="toggleVisibility('5')">{{ names4 }}</button>
+                        <div id="5" class="hidden">
+                            <p>{{ details4 }}</p>
+                        <script>
+                            const marker5 = new mapboxgl.Marker({
+                                color: "#57078c",
+                                draggable: false
+                            });
+                            marker5.setLngLat([36, -121]).addTo(map);          //need coordinates here
+                        </script>
+                        </div>
+                    </div>
                 </div>
-                <script>
-                    function toggleVisibility(hiddenContent) {
-                        var content = document.getElementById(hiddenContent);
-                        if (content.style.display === "none") {
-                            content.style.display = "block";
-                        } else {
-                            content.style.display = "none";
-                        }
-                    }
-                </script>
-                
-                <script>
-                    var marker1 = new mapboxgl.Marker({
-                        color: "#5c0606",
-                        draggable: false
-                    });
-                    marker1.setLngLat([long, lat]).addTo(map);          //need coordinates here
-                </script>
-            </div>
-            <div class ="addy2">
-                <button onclick="toggleVisibility('2')">2ND BEST SPOT</button>
-                <div id="2" class="hidden">
-                    <p>Cost&Details</p>
-
-                
-                <script>
-                    const marker2 = new mapboxgl.Marker({
-                        color: "#215227",
-                        draggable: false
-                    });
-                    marker2.setLngLat([long, lat]).addTo(map);          //need coordinates here
-                </script>
-            </div>
-            <div class ="addy3">
-
-                <button onclick="toggleVisibility('3')">3RD BEST SPOT</button>
-                <div id="3" class="hidden">
-                    <p>Cost and Details</p>
-
-                <script>
-                    const marker3 = new mapboxgl.Marker({
-                        color: "#06195c",
-                        draggable: false
-                    });
-                    marker3.setLngLat([long, lat]).addTo(map);          //need coordinates here
-                </script>
-            </div>
-            <div class ="addy4">
-
-                <button onclick="toggleVisibility('4')">4TH BEST SPOT</button>
-                <div id="4" class="hidden">
-                    <p>Cost and Details</p>
-
-                <script>
-                    const marker4 = new mapboxgl.Marker({
-                        color: "#a38908",
-                        draggable: false
-                    });
-                    marker4.setLngLat([long, lat]).addTo(map);          //need coordinates here
-                </script>
-            </div>
-            <div class ="addy5">
-
-                <button onclick="toggleVisibility('5')">5TH BEST SPOT</button>
-                <div id="5" class="hidden">
-                    <p>Cost and Details</p>
-                <script>
-                    const marker5 = new mapboxgl.Marker({
-                        color: "#57078c",
-                        draggable: false
-                    });
-                    marker5.setLngLat([long, lat]).addTo(map);          //need coordinates here
-                </script>
+                <div class = but>
+                    <a href="/">
+                        <button class="tryNew">Try New Location!</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <a href="/index.html">
-         <button class="tryNew">Try New Location!</button>
-    </a>
 </body>
 </html>

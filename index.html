@@ -3,39 +3,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INRIX PARKING</title>
-    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="/static/styling.css">
 </head>
 
 <body>
         <div class="backgroundPic">
-            <img>
         </div>
-        <div class="emptySpace"></div>
-        <div class="indexTitle">
-            <h1>CurbStop</h1> 
+        <div class = "all">
+            <div class = "content">
+                <div class="indexTitle">
+                    <h1>INRIX PARKING ASSIST</h1> 
+                </div>
+                <div class="inputInfo">
+                    <form action = "#" method="post">
+                        <input type="text" placeholder="Address..." name = "address" asp-for = "Address">
+                        <input type="text" placeholder="City..." name = "city" asp-for = "City">
+                        <input type="text" placeholder="State..." name = "state" asp-for = "State">
+                        <input type="text" placeholder="ZIP..." name = "zip" asp-for = "ZIP">
+                        <input type="text" placeholder="Radius from Location..." name = "radius" asp-for = "Radius">
+                        <br>
+                        <div class = "drop">
+                            <label for="safetySelect">What type of parking spot are you looking for?</label>
+                            <select name = "preference" id="safetySelect">
+                                <option value = "cheapest">The cheapest</option>
+                                <option value = "closest">The closest</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="btn">
+                            <input type="submit" value = "SHOW ME PARKING SPOTS!"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="inputInfo">
-            <input type="text" placeholder="Address...">                        <!--goes to backend-->
-            <input type="text" placeholder="City...">                           <!--goes to backend-->
-            <input type="text" placeholder="State...">                          <!--goes to backend-->
-            <input type="text" placeholder="ZIP...">                            <!--goes to backend-->
-            <input type="text" placeholder="Radius from Location...">           <!--goes to backend-->
-        </div>
-        <div class="priorities">
-            <label for="safetySelect">What type of parking spot are you looking for?:</label>
-            <select id="safetySelect">
-                <option>The safest</option>
-                <option>The cheapest</option>
-                <option>closest</option>
-            </select>
-        </div>
-        <div class="searchBtn">
-            <a href="/spots.html">
-             <button>
-                SHOW ME PARKING SPOTS!
-             </button>
-            </a>
-        </div>
-    </div>
+
 </body>
 </html>
