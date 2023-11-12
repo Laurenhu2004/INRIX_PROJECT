@@ -34,4 +34,3 @@ app.get('/gettoken', async function (req, res) {
 app.listen(port, function () {
     console.log("Server has been started at " + port);
 })
-
