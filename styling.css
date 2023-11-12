@@ -219,7 +219,7 @@ body{
 
 .hidden {
     background-color:black; 
-    color: rgb(124, 124, 194);
+    color:white;
     font-size: 150%;
     font-family: 'Impact,fantasy';
     border-radius: 10px;
