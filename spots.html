@@ -4,7 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INRIX PARKING</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
-    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="styling.css" type="text/css">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 
 <body>
@@ -15,8 +19,19 @@
     <div class="indexTitle">
         <h1>INRIX PARKING ASSIST</h1> 
     </div>
+
     <div class="rankings">
-        <div class="spotsMap">MAP</div>
+
+    <div class="spotsMap">
+        <div id='map' style='width: 70vh; height: 50vh;'></div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYW5uaWthbjE2IiwiYSI6ImNsb3YwbzBhNjBuczYyaXBmbTNnNzRsa20ifQ.Nf8u0AbtL89Ce5TwhV01hQ';
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11'
+        });
+        </script>
+    </div>
         <div class="spotRankings">
             <a href="/chosen.html">
             <button>

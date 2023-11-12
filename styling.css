@@ -40,7 +40,7 @@ body{
     background-color: rgba(0,0,0,0.8) ;
     border: none;
     border-bottom: 5px, black;
-    margin-left: 4%;
+    margin-left: 8%;
     color: turquoise;
     height: 7%;
 
@@ -151,9 +151,6 @@ body{
 
 .spotsMap {
     margin-left: 15%;
-    background-color: red;
-    width: 35%;
-    height: 70%;
     margin-top: -0.5%;
     float: left;
     text-align: center;
@@ -184,5 +181,6 @@ body{
     background-color: rgb(20, 26, 52);
     color:  lightgrey;
     font-size: 210%;
-    margin-left: 2%;
+    margin-left: 8%;
+    margin-top: 10%;
 }
