@@ -19,7 +19,7 @@ url = "https://api.iq.inrix.com/blocks/v3?point={}%7C{}&radius={}".format(lati, 
 
 payload = {}
 headers = {
-  'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IndtbGR5bmRzemMiLCJ0b2tlbiI6eyJpdiI6ImZiZDU5ZThiOWU1YzU0ZjU4Nzc1OTA2OWQzZDg2MmVkIiwiY29udGVudCI6ImM5MmYzNTJjYzAxMzJhMGI1Y2Q1NzZkOGRkMDYwYzUzMTZmYjBhMWU1ODg4ZDU5OTEyYTE5ZWVlZDk3M2UyY2Y3MWNiMjFlZDhhZDhkYzdkNzQwZTAyMzdjZTEwMWVmODFmYzBkNzQ2NmQ5MjkwZThjNmZkZDAzNmUzNDMxZjA1YTdlNDBjYmY2ZWI5N2I2ODkxYzg3MDU2NmY1ZTZlNDk5NGJmZTA1NmRmZWU2OGQ0N2E5NjY5NmZjYjc0NTI3OTg4MDdiOWQ0ODJhNWUxZTBiNDUzMWU4ZjYxMWI2YzlhZWYxYjFiZTcyZTI1ZDVlZDFiYTcxOTMwZDViNmNkZTUyNzIxYTMxYzYwMjcwNWI3MGMzNTljMDg2MTg2NDY1ZTRhMzkzZTg3OTVmZGY3MzhlZTU1M2ZmODc5MjYyYTIwMzU2ZThlMTk5NzMzNThlNzE2YzgyYTNiNDdiN2ZiMzZhNmYxNWFkMmE0NWNlZmVjOGEyNDA1NjVlZjM1MjFiMGI0MzY3YzI1ZGNiYWUzYzRmOGJhYzhkMTFhMjQwMTY0OTE2NmFkOWY4YTc5MzljYzZhMDYzNmFkYzc1NWVhNWU2MWQwMmRjYjZlZGE1YmY4MmM5MTRiZDhiOTlhNDE3YTQ2YzM5OWVjMzZmNzQwM2M5OGMwOTJlN2Q4Y2M2OTY4NmM1OWU5ZTVkNzBkZGJiMmUwMTdhOWZmYjY1ZTJjMTgyMTMwNzZjMmExOGEwNjE0ZTNlOGY0ODQyYWNjYmFjY2RjODFmMmVlOTI4OWM4YTdkOWQ4MWQ3OGU1NTkyN2MwYTZhYTkyZjUzNTM3N2I4MzhiNTlhMmFhNDRiZDZmZjI3Y2QzMTVlZDkxNjY2NTMzMTYyMmNkIn0sInNlY3VyaXR5VG9rZW4iOnsiaXYiOiJmYmQ1OWU4YjllNWM1NGY1ODc3NTkwNjlkM2Q4NjJlZCIsImNvbnRlbnQiOiJjZDdjMzgwMTkyMWMwMzVhMmFlODBhZGFjZTE3MTc1NjNkZDMzNzFhNWRiNWY2ZDUxOWI0YTViMWM0NmJmMWYxNmJlZDIzZTdkMGQ4ZTM3NjZmMDQxMzA5In0sImp0aSI6IjIyNWIxZjdjLTRiNjEtNDE0My05MzNkLThlYmI4YTk1NGJmYSIsImlhdCI6MTY5OTc1NTgwMiwiZXhwIjoxNjk5NzU5NDAyfQ.O6_o6Vr89yrvhHXgv2ZrPQpyjbjVJz6Y2HOzEyOBumg'
+  'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IndtbGR5bmRzemMiLCJ0b2tlbiI6eyJpdiI6ImE5YTkwZWI5Nzc0YTFkNjVhYWFmMTE1MzkzOGE3NzA2IiwiY29udGVudCI6IjU0YjU5YmVkMDA5MjhjN2QxZDA3Y2RiMTY3ZWUzYmJhZDBiYWFmY2RjM2M5ZDhkOTliOWYzZTVlMmE0OWFjMTM4OWMyM2JkMTE3NjFlNjU1ZTkzYjExZjNhMTE5MmM1ZGE4YmNiNWVhZmEyZjkxMDU3ZTk4ZTBlYmY1ZjQxMjQ5NjE1YmMwMzZjYzAxOGYzYTFkMTkzZjA3Njk0NGYwN2M0MTRlZjA1YjNiNWZkOWJlOWUxNTQzOTI1Mzc2YTVmZjNjMjgyMGQ4NDZhNzM4NDgxY2JlNWUwNzJkODVkMWYwMWM5YmMyOWYyYmVmMWU1ODYyYjk5NDdkOWEwYTIxMjYxMmNmMmY4YTM0NzFiMWM4NDBmOWFmZmZiYzhiMTdlMWU1OTg0ZmRmNjY1NDE2ZGJlNGZkNGFkNzNkYzgyZTUzOWQ4YjgyMDVlNWU2MDJiZDUwYzk3MjdjMDExNjMwMmM0YjNjMTI3ZjlhZGYwM2QxODRiMzg4Mzc1MzYxMTliMWE1NDAxM2M2MzU1MjgzMzQ0ZDk4NGQ3YmIxMTFjNDI2OWNhYjNkOWMyMjhlOTE3MjE0Mjg1ZDQ4ZDI4YWZlNGY3ZGFkOGMyZDVkZGJhMTMwMzMzMDlkODBlZjgyYTM0NmYwNTQ5ZTJkYzgwOWIxYjdkOGUwZWQxMmNiYTg1MGYwZTBhMDk3MGU0YTIzZmE2YThlZjE3ZTBiN2RmY2UzYjI4MzFlMGE1NGUyYmU3MTMwOTZhODJlNjJiMjE2OTJmNzhlNmM4YThlZDJhYjQyYzg0MzUzYjJjZDNiOTEyYzQ4OWFjM2IzYTBmNGNiZjg2ZjY2MTRlMWZlYzUyZjY5YWNiOWE1NzA2YzY5NDc4OTQ4MDBkNWRiIn0sInNlY3VyaXR5VG9rZW4iOnsiaXYiOiJhOWE5MGViOTc3NGExZDY1YWFhZjExNTM5MzhhNzcwNiIsImNvbnRlbnQiOiI1NzhhOTVlMzNhODJkOTVhNmI0NGMwYjU1MGM2NGFiOWM2YWE5N2VlZGZkNGJlYzFiMGE4MDcyZDI5MDhiMDAzYjdlOTJiYzUxMzQ5ZjI3NmVlM2QwMGNkIn0sImp0aSI6IjUyNDAzN2IwLWNlMmItNDNhOC1iMWQ1LWM3NGE5MmMyMzc4NiIsImlhdCI6MTY5OTc1OTY5NiwiZXhwIjoxNjk5NzYzMjk2fQ.YUBOeDxWdubQEF3MsiuatfOUdhXvvZujtgY6OeBrdw4'
 }
 response = requests.request("GET", url, headers=headers, data=payload)
 
@@ -31,6 +31,7 @@ openSegments = []
 segmentNames = []
 segmentDict = {}
 probDict = {}
+bestStreetProb = 0
 
 r = (response.json()).get('result')
 #print(r)
@@ -38,29 +39,24 @@ r = (response.json()).get('result')
 for i in range(0, len(r)):
     names.append(r[i].get('name'))
     probability.append(r[i].get('probability'))
+
+    if(r[i].get('probability') > bestStreetProb):
+        bestStreetProb = r[i].get('probability')
+
     segments = r[i].get('segments')
+
 
     for j in range(0, len(segments)):
         spaces = segments[j].get('spacesTotal')
         isOpen = segments[j].get('isOpen')
 
         if spaces >= 1 & isOpen == True:
-            openSegments.append(segments[j].get('segmentID'))
-            segmentNames.append(r[i].get('name'))
-
-        
+            segmentDict[segments[j].get('segmentID')] = [r[i].get('name'), r[i].get('probability'), segments[j].get('side'), segments[j].get('start'), segments[j].get('end')]
 
 
-for k in range(0, len(openSegments)):
-    if 
-        temp = [segmentNames[l], probability[k]]
-        segmentDict[openSegments[l]] = temp
-
-    
 #print(names)
 #print(probability)
 #print(openSegments)
 #print(segmentNames)
-
 #print(probDict)
 print(segmentDict)
