@@ -37,11 +37,17 @@ body{
 }
 
 .inputInfo input{
-    background-color: rgba(0,0,0,0.5) ;
+    background-color: rgba(0,0,0,0.8) ;
     border: none;
     border-bottom: 5px, black;
     margin-left: 4%;
     color: turquoise;
+    height: 7%;
+
+}
+
+.inputInfo input:hover{
+    border-bottom: 2px purple;
 }
 
 .priorities {
@@ -80,4 +86,103 @@ body{
     transition-duration: 0.2s;
     border: none;
     border-bottom: 0.5rem solid;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------Chosen Website--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+.chosenEmptySpace{
+    height: 3%;
+}
+
+.indexTitle {
+    width: 40%;
+    height: 10%;
+    background-color: rgba(255,255,255,.2) ;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-bottom: 4px;
+    top: 50%;
+    left: 50%;
+    font-family: 'Courier New', monospace;
+    font-size: 100%;
+    color: rgb(28, 28, 201);
+}
+
+.header {
+    text-align: center; 
+    width: 60%;
+    background-color: transparent;
+    margin-right: 20%;
+    margin-left: 20%;
+    height: 10%;
+    font-size: 30px;
+    font-family: 'Courier New', monospace;
+}
+
+.viewSelect {
+    height: 70%;
+    width: 60%;
+    margin-top: -10 px;
+    background-color: black;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.viewOption button{
+    height: 5%;
+    width: 49%;
+    background-color: purple;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------Spots website-----------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+.rankings {
+    margin-top: 3%;
+}
+
+.spotsMap {
+    margin-left: 15%;
+    background-color: red;
+    width: 35%;
+    height: 70%;
+    margin-top: -0.5%;
+    float: left;
+    text-align: center;
+}
+
+.spotRankings{
+    float: right;
+    margin-right: 22.5%;
+}
+
+.spotRankings button{
+    background-color: transparent;
+    color:  rgb(20, 26, 52);
+    font-size: 205%;
+    border: none;
+    border-bottom: 2px, rgb(20, 26, 52);
+}
+
+.spotRankings button:hover{
+    background-color: rgb(20, 26, 52);
+    color:  lightgrey;
+    font-size: 210%;
+    transition-duration: 0.2s;
+    
+}
+
+.tryNew {
+    background-color: rgb(20, 26, 52);
+    color:  lightgrey;
+    font-size: 210%;
+    margin-left: 2%;
 }
